@@ -33,42 +33,44 @@
 
                 <form action="/ss" method="post">
                     <fieldset>
-                        <div >
-                            <h3>Let's do this!</h3>
-                            <div>
-                                <label for="firstName">first name</label>
-                                <input type="text" name="firstName">
+                        <h3>Let's do this!</h3>
+                        <div class="flex-container">
+                            <div >
+                                <div>
+                                    <label for="firstName">first name</label>
+                                    <input type="text" name="firstName">
+                                </div>
+                                <div>
+                                    <label for="email">email</label>
+                                    <input type="email" name="email" id="email">
+                                </div>
+                                <div>
+                                    <label for="password">password</label>
+                                    <input type="password" name="password" id="password" minlength="8">
+                                </div>
                             </div>
                             <div>
-                                <label for="email">email</label>
-                                <input type="email" name="email" id="email">
-                            </div>
-                            <div>
-                                <label for="password">password</label>
-                                <input type="password" name="password" id="password" minlength="8">
+                                <div>
+                                    <label for="lastName">last name</label>
+                                    <input type="text" name="lastName" id="lastName">
+                                </div>
+                                <div>
+                                    <label for="phone">phone number</label>
+                                    <input type="tel" name="phone" id="phone">
+                                </div>
+                                <div>
+                                    <label for="Cpassword">confirm password</label>
+                                    <input type="password" name="Cpassword" id="Cpassword" minlength="8">
+                                </div>
                             </div>
                         </div>
+                        </fieldset>
                         <div>
-                            <div>
-                                <label for="lastName">last name</label>
-                                <input type="text" name="lastName" id="lastName">
-                            </div>
-                            <div>
-                                <label for="phone">phone number</label>
-                                <input type="tel" name="phone" id="phone">
-                            </div>
-                            <div>
-                                <label for="Cpassword">confirm password</label>
-                                <input type="password" name="Cpassword" id="Cpassword" minlength="8">
-                            </div>
+                            <button type="button">Create Account</button>
+                            <h4 id="login">Already have an account? <a href="">Log in</a></h4>
                         </div>
-                    </fieldset>
-                    <div>
-                        <button type="button">Create Account</button>
-                        <h4>Already have an account? <a href="">Log in</a></h4>
-                    </div>
-                </form>
-            </section>
+                    </form>
+                </section>
         </section>
     </div>
 </body>

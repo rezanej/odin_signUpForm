@@ -57,6 +57,7 @@ table {
 	--shadow:  #c0bcbc;
 	--dark-light-hover:#333;
 	--dark-light-active:#888;
+	
 }
 :root.dark{
 	--backgroundColor:black;
@@ -86,15 +87,18 @@ body,html{
 .main-container{
 	display: flex;
 	height: 100%;
+	flex-wrap: wrap;
+	overflow: auto;
 }
 
 .section-image-logo{
-	min-width:clamp(300px , calc(100vw*0.40) , calc(100vh*0.68)) ;
+	min-width:30vw ;
 	background-image: url(./images/taras-chernus-SYe-m7eGqoI-unsplash.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
+	flex:0 1 auto;
 }
 .section-image-logo footer{
 	margin-top: auto;
@@ -132,10 +136,12 @@ body,html{
 	font-size: 2.5rem;
 }
 .section-right{
-	background-color:var(--backgroundColorSecondary);
+	background-color:var(--backgroundColor);
 	color: var(--textColor);
-	max-height: 100vh;
-	overflow-y: scroll;
+	height: 100%;
+	flex: 1;
+	flex-basis: 500px;
+
 }
 .headers{
 	padding: 20px 40px 30px 30px ;
@@ -146,32 +152,42 @@ body,html{
 	padding: 20px 0px;
 }
 
-.section-form fieldset{
+.section-form .flex-container {
 	background-color: var(--backgroundColor);
 	display: flex;	
 	padding: 20px 30px;
 	box-shadow: 1px 1px 2px 0px var(--shadow) ;
+	flex-wrap: wrap;
 }
-.section-form fieldset div{
+.section-form fieldset{
+	background-color: var(--backgroundColor);
+}
+.section-form fieldset h3{
+	padding-left: 30px;
+}
+.section-form .flex-container >div {
+	flex: 1;
+	flex-basis: 300px;
+}
+.section-form .flex-container div div{
 	padding-bottom: 20px;
 	flex: 1;
+	flex-basis: 420px;
 }
-.section-form fieldset> div{
-	padding-bottom: 0px;
-	flex: 1;
-}
-.section-form form fieldset > div:last-child{
-	padding-top: 62px;
-	padding-left: 60px;
-}
-.section-form h3{
 
+.section-form h3{
+	background-color: var(--backgroundColorSecondary);
 }
 .section-form form >div{
 	padding: 20px 30px;
+	background-color: var(--backgroundColor);
 }
-.section-form form >div h4{
+.section-form fieldset div:last-child{
+	background-color:var(--backgroundColorSecondary)
+}
+.section-form  h4{
 	padding: 20px 0px; 
+	color: var(--textColor)
 }
 .section-form a{
 	text-decoration: none;
@@ -231,4 +247,12 @@ input:invalid{
 }
 #dark-light:active{
 	background-color: var(--dark-light-active);
+}
+@media (max-width:900px) {
+	.section-image-logo{
+		flex-grow: 1;
+		min-height: 60vh;
+	}
+	
+	
 }
